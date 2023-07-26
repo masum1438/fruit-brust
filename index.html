@@ -1,141 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
- <!-- color -->
- <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-            'primary-btn': '#F85559',
-            
-          }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-btn': '#F85559',
+
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
- <!-- google font -->
- <style>
-    .font-poppins{
-        font-family: 'Poppins', sans-serif;
-    }
- </style>
+    </script>
+    <!-- google font -->
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 
 </head>
+
 <body class=".font-poppins">
     <header>
-      
+
         <!-- nav bar1 -->
         <nav class=" lg:mx-24 my-8 mx-4 md:mx-12  text-[#FFF]">
-        <div class="navbar  bg-[#F85559] rounded-full">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-                <ul tabindex="0" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>                
-                  <li><a>About us</a></li>
-                  <li><a>Shop</a></li>                
-                  <li><a>All fruits</a></li>
-                </ul>
-              </div>
-              <div class="navbar-center hidden lg:flex">
-                <ul class=" menu menu-horizontal px-1">
-                  <li><a>Home</a></li>                
-                    <li><a>About us</a></li>
-                    <li><a>Shop</a></li>                
-                    <li><a>All fruits</a></li>
-                </ul>
-              </div>
-             
-            </div>
-            <div class="lg:flex-1 lg:-mr-48 md:-mr-24">
-            <div class="grid grid-cols-2 gap-1">
-                <div><img src="images/logo.png" alt=""></div>
-                <div class="btn btn-ghost normal-case text-xl "> daisyUI </div>                    
-            </div>
-            <div class="navbar-center hidden lg:flex">
-            <div class=" gap-2  mr-10 grid grid-cols-2">
-                <div class="form-control ">
-                  <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto"  />
-               </div>  
-               <div class="-mx-10 my-2">
-                  <button className="btn btn-ghost btn-circle ">
-                     <img src="images/search.png" alt="">
-                  </button>
-               </div>              
-              </div>
-            </div></div>
-          </div>
-        </nav>              
-    </header>
-    <main class="container mx-auto">
-        <!-- slide -->
-        <div class="carousel w-3/4 lg:mx-40 md:mx-20 mx-4">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="images/banner1.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="images/banner2.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="images/banner3.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="images/banner4.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-            
-          </div>
-          <div>
-            <!-- card -->
-            <div class="card -my-64 text-white mx-48">
-                
-                <div class="card-body items-center text-center">
-                  <h2 class="card-title font-extrabold">Exotic tastes at your <br> doorstep</h2>
-                  <p class="font-medium">If a dog chews shoes whose shoes does he choose?</p>
-                  <div class="card-actions">
-                    <button class="btn bg-primary-btn text-white">Shop Now</button>
-                  </div>
-                </div>
-                <figure class="px-10 pt-10 grid grid-cols-5 bg-[#FFF]">
-                  <img src="images/fruit1.png" alt="">
-                  <img src="images/fruit2.png" alt="">
-                  <img src="images/fruit3.png" alt="">
-                  <img src="images/fruit4.png" alt="">
-                  <img src="images/fruit5.png" alt="">
-                </figure>
-              </div>
-            
-        </div>
-        <!-- section 2 in main -->
-        <section>
+            <div class="navbar  bg-[#F85559] rounded-full">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All fruits</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class=" menu menu-horizontal px-1">
+                            <li><a>Home</a></li>
+                            <li><a>About us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All fruits</a></li>
+                        </ul>
+                    </div>
 
+                </div>
+                <div class="lg:flex-1 lg:-mr-48 md:-mr-24">
+                    <div class="grid grid-cols-2 gap-1">
+                        <div><img src="images/logo.png" alt=""></div>
+                        <div class="btn btn-ghost normal-case text-xl "> daisyUI </div>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <div class=" gap-2  mr-10 grid grid-cols-2">
+                            <div class="form-control ">
+                                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                            </div>
+                            <div class="-mx-10 my-2">
+                                <button className="btn btn-ghost btn-circle ">
+                                    <img src="images/search.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- slide -->
+        <section class="">
+            <div class="carousel   w-3/4 lg:mx-40 md:mx-20 mx-4 ">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="images/banner1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="images/banner2.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="images/banner3.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="images/banner4.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <!-- card -->
+                <div class="card lg:-my-64 lg:mx-48 md:-my-48 md:mx-20 mx-1 -my-40  text-[#FFF]">
+
+                    <div class="card-body items-center text-center ">
+                        <h2 class="card-title md:font-bold lg:font-extrabold font-light text-sm lg:text-4xl md:text-xl">
+                            Exotic tastes at your doorstep</h2>
+                        <h5 class="lg:font-medium font-thin text-xs lg:text-2xl md:text-base">If a dog chews shoes <br>
+                            whose shoes does he choose?</h5>
+                        <div class="card-actions">
+                            <button class="btn bg-primary-btn md:h-3/4 h-2 lg:h-auto text-white">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class=" hidden lg:flex border ">
+                        <figure class="lg:px-36  bg-[#FFF]">
+                            <img src="images/fruit1.png" alt="">
+                            <img src="images/fruit2.png" alt="">
+                            <img src="images/fruit3.png" alt="">
+                            <img src="images/fruit4.png" alt="">
+                            <img src="images/fruit5.png" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- section 2 in main -->
+        <section class="mt-96 mx-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center text-center">
+                <div>
+                    <h2 class="font-extrabold text-4xl">Deal of the day</h2>
+                    <p class="font-medium">Contrary to popular belief, is not simply random text. It has roots in a
+                        piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div>
+                    <div class="stats stats-horizontal shadow">
+
+                        <div class="stat">
+
+                            <div class="stat-value">29</div>
+                            <div class="stat-desc">Days</div>
+                        </div>
+
+                        <div class="stat">
+
+                            <div class="stat-value">15</div>
+                            <div class="stat-desc">Hours</div>
+                        </div>
+
+                        <div class="stat">
+                            <div class="stat-value">25</div>
+                            <div class="stat-desc">Minutes</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">08</div>
+                            <div class="stat-desc">Seconds</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- section 3 in main -->
+        <section class="my-12 ">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mx-10 gap-3 ">
+
+                <div class="card border bg-base-100  items-center text-center">
+                    <figure><img src="images/fruit6.png" alt="" /></figure>
+                    <div class="card-body">
+                        <h4 class="card-title font-bold">12.90$ - 18.85$</h4>
+                        <h6 class="font-semibold text-xl">Apples</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                    </div>
+                </div>
+
+                <div class="card border bg-base-100  items-center text-center">
+                    <figure><img src="images/fruit7.png" alt="" /></figure>
+                    <div class="card-body">
+                        <h4 class="card-title font-bold">12.90$ - 18.85$</h4>
+                        <h6 class="font-semibold text-xl">Orange</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                    </div>
+                </div>
+
+                <div class="card border bg-base-100  items-center text-center">
+                    <figure><img src="images/fruit8.png" alt="" /></figure>
+                    <div class="card-body">
+                        <h4 class="card-title font-bold">12.90$ - 18.85$</h4>
+                        <h6 class="font-semibold text-xl">Red Dragon</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                    </div>
+                </div>
+
+                <div class="card border bg-base-100  items-center text-center">
+                    <figure><img src="images/fruit9.png" alt="" /></figure>
+                    <div class="card-body">
+                        <h4 class="card-title font-bold">12.90$ - 18.85$</h4>
+                        <h6 class="font-semibold text-xl">Banana</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center my-8">
+                <button class="btn bg-primary-btn md:h-3/4 h-2 lg:h-auto text-white">Shop Now</button>
+            </div>
+        </section>
+        <!-- section 4 -->
+        <section class="">
+            
+
+
+            <div class="grid lg:grid-rows-2 grid-rows-6 ">
+                <div class="lg:row-span-1 row-span-5 w-3/4 lg:mx-40 md:mx-20 lg:mx-4 md:mx-12 mx-10">
+                <img class="h-full my-96 lg:my-0" src="images/banner3.png" alt="">
+                </div>
+                <!-- card -->
+                <div class="  row-span-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:-my-80 lg:mx-48 -my-96  text-[#FFF]">
+                    <div class="card -my-36 lg:-my-14 items-center text-center">
+                        <figure><img class="h-1/2 " src="images/member1.png" alt="" /></figure>
+                        <div class="card-body -my-12 ">
+                            <h4 class="card-title font-bold text-xs">Awlad Hossain</h4>
+                            <h6 class="font-medium text-xs">Fruits Expert</h6>
+
+                            <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                            <div class="grid grid-cols-3">
+                                <a><img class="w-6 h-6" src="images/facebook 1.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/youtube.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/tik-tok 1.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card -my-44 lg:-my-14 items-center text-center">
+                        <figure><img class="h-1/2" src="images/member2.png" alt="" /></figure>
+                        <div class="card-body -my-12">
+                            <h4 class="card-title font-bold text-xs">Safia Chowdhury</h4>
+                            <h6 class="font-medium text-xs">Fruits Expert</h6>
+
+                            <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                            <div class="grid grid-cols-3">
+                                <a><img class="w-6 h-6" src="images/facebook 1.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/youtube.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/tik-tok 1.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card -my-56 lg:-my-14 items-center text-center">
+                        <figure><img class="h-1/2" src="images/member3.png" alt="" /></figure>
+                        <div class="card-body -my-12">
+                            <h4 class="card-title font-bold text-xs">Rokib Hossain</h4>
+                            <h6 class="font-medium text-xs">Fruits Expert</h6>
+
+                            <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                            <div class="grid grid-cols-3">
+                                <a><img class="w-6 h-6" src="images/facebook 1.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/youtube.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/tik-tok 1.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" -my-56 lg:-my-14 card  items-center text-center">
+                        <figure><img class="h-1/2" src="images/member4.png" alt="" /></figure>
+                        <div class="card-body -my-12">
+                            <h4 class="card-title font-bold text-xs">Chaity</h4>
+                            <h6 class="font-medium text-xs">Fruits Expert</h6>
+
+                            <h6 class="text-[#F85559] font-semibold text-base">Details</h6>
+                            <div class="grid grid-cols-3">
+                                <a><img class="w-6 h-6" src="images/facebook 1.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/youtube.svg" alt=""></a>
+                                <a><img class="w-6 h-6" src="images/tik-tok 1.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
         </section>
 
     </main>
@@ -143,4 +338,5 @@
 
     </footer>
 </body>
+
 </html>
