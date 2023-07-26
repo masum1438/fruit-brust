@@ -9,7 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
- 
+ <!-- color -->
+ <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary-btn': '#F85559',
+            
+          }
+        }
+      }
+    }
+  </script>
  <!-- google font -->
  <style>
     .font-poppins{
@@ -22,14 +35,14 @@
     <header>
       
         <!-- nav bar1 -->
-        <nav class=" lg:mx-24 my-8 mx-4 md:mx-12 ">
+        <nav class=" lg:mx-24 my-8 mx-4 md:mx-12  text-[#FFF]">
         <div class="navbar  bg-[#F85559] rounded-full">
             <div class="navbar-start">
               <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabindex="0" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                   <li><a>Home</a></li>                
                   <li><a>About us</a></li>
                   <li><a>Shop</a></li>                
@@ -37,7 +50,7 @@
                 </ul>
               </div>
               <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
+                <ul class=" menu menu-horizontal px-1">
                   <li><a>Home</a></li>                
                     <li><a>About us</a></li>
                     <li><a>Shop</a></li>                
@@ -49,7 +62,7 @@
             <div class="lg:flex-1 lg:-mr-48 md:-mr-24">
             <div class="grid grid-cols-2 gap-1">
                 <div><img src="images/logo.png" alt=""></div>
-                <div class="btn btn-ghost normal-case text-xl"> daisyUI </div>                    
+                <div class="btn btn-ghost normal-case text-xl "> daisyUI </div>                    
             </div>
             <div class="navbar-center hidden lg:flex">
             <div class=" gap-2  mr-10 grid grid-cols-2">
@@ -64,11 +77,66 @@
               </div>
             </div></div>
           </div>
-        </nav>
-        <!-- nav bar2 -->
-       
+        </nav>              
     </header>
-    <main>
+    <main class="container mx-auto">
+        <!-- slide -->
+        <div class="carousel w-3/4 lg:mx-40 md:mx-20 mx-4">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="images/banner1.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="images/banner2.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="images/banner3.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="images/banner4.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            
+          </div>
+          <div>
+            <!-- card -->
+            <div class="card -my-64 text-white mx-48">
+                
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title font-extrabold">Exotic tastes at your <br> doorstep</h2>
+                  <p class="font-medium">If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions">
+                    <button class="btn bg-primary-btn text-white">Shop Now</button>
+                  </div>
+                </div>
+                <figure class="px-10 pt-10 grid grid-cols-5 bg-[#FFF]">
+                  <img src="images/fruit1.png" alt="">
+                  <img src="images/fruit2.png" alt="">
+                  <img src="images/fruit3.png" alt="">
+                  <img src="images/fruit4.png" alt="">
+                  <img src="images/fruit5.png" alt="">
+                </figure>
+              </div>
+            
+        </div>
+        <!-- section 2 in main -->
+        <section>
+
+        </section>
 
     </main>
     <footer>
