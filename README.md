@@ -4,7 +4,7 @@
 
 Fruit Burst is a simple front-end web application designed to showcase a vibrant and engaging user interface. The project focuses on delivering a visually appealing experience while allowing users to explore various fruit-related products. This application highlights my skills in front-end development and UI design.
 
-# Key Features:
+**Key Features:**
 
 **Product Catalog**: Display a range of fruits with detailed images and prices for each item.
 
