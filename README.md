@@ -1,10 +1,10 @@
 **Project Live Demo :** https://radiant-brigadeiros-5aa4a3.netlify.app/
 
-#Project Overview:
+# Project Overview:
 
 Fruit Burst is a simple front-end web application designed to showcase a vibrant and engaging user interface. The project focuses on delivering a visually appealing experience while allowing users to explore various fruit-related products. This application highlights my skills in front-end development and UI design.
 
-#Key Features:
+# Key Features:
 
 **Product Catalog**: Display a range of fruits with detailed images and prices for each item.
 
@@ -16,7 +16,7 @@ Fruit Burst is a simple front-end web application designed to showcase a vibrant
 
 **User-Centric Layout**: Organized layout sections for quick access to products and information, helping users easily browse available fruits.
 
-#Technologies Used
+# Technologies Used
 
 **HTML5 & CSS3:** Base structure and styling for the interface.
 
